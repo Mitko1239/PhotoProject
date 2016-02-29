@@ -86,13 +86,12 @@ input[type="submit"], input[type="reset"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
-  border: 0;
   padding: 7px;
   border-radius: 3px;
   color: #000;
-  border-bottom: 2px solid;
+  border: 0 #55acee;
   border-right: 2px solid;
-  border-color: #55acee;
+  border-bottom: 2px solid;
   box-shadow: 0 1px 1px #000;
 }
 

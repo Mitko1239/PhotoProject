@@ -66,17 +66,16 @@ input[type="submit"]:disabled {
 
 }*/
 input[type="submit"], input[type="reset"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  border: 0;
-  padding: 7px;
-  border-radius: 3px;
-  color: #000;
-  border-bottom: 2px solid;
-  border-right: 2px solid;
-  border-color: #d64937;
-  box-shadow: 0 1px 1px #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    padding: 7px;
+    border-radius: 3px;
+    color: #000;
+    border: 2px solid #d64937;
+    border-top-width: 0;
+    border-left-width: 0;
+    box-shadow: 0 1px 1px #000;
 }
 
 input[type="submit"]:active, input[type="reset"]:active {
