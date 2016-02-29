@@ -1,0 +1,28 @@
+.halfWidth {
+	width: calc(50% - 27px);
+}
+
+.userForm {
+	margin: 20px auto;
+}
+
+.userForm td {
+	padding: 5px;
+}
+
+#rememberMe {
+	margin-right: 40px;
+}
+
+#idLogin, #passwordLogin, #userRegister, #passwordRegister, #password2Register, #emailRegister, #firstNameRegister, #lastNameRegister {
+	max-width: 356px;
+	padding: 5px;
+}
+
+#doLogin {
+	float: right;
+}
+
+#doRegister {
+	float: left;
+}

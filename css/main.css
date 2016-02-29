@@ -1,0 +1,149 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400&subset=latin,cyrillic-`,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,cyrillic-ext,cyrillic);
+
+*:not(body) {
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+sup {
+	color: #d64937;
+	font-weight: 400;
+	padding-left: 3px;
+}
+
+.textL {
+    text-align: left;
+}
+
+.textR {
+    text-align: right;
+}
+
+.spacer10 {
+	padding: 10px;
+}
+html, body {
+    font: 1em 'Roboto Condensed', sans-serif;
+    color: #333;
+}
+
+header {
+	background: #ccc;
+}
+
+footer {
+    background-color: #999;
+}
+
+#title {
+    font-size: 2em;
+}
+
+header, main, aside, footer {
+	padding: 5px;
+}
+
+#container {
+	width: 90vw;
+	margin: 5px auto 0;
+	background-color: #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+#containerMain {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    background-color: #4f4;
+    height: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li a {
+    padding: 5px 20px;
+    display: block;
+    background: #fff;
+    margin: 0 5px 0 5px;
+}
+
+main {
+    background-color: #f44;
+    flex-grow: 1;
+}
+
+aside {
+    background-color: #44f;
+	width: 250px;
+	/*width: 0;*/
+	float: none;
+}
+a, a:link, a:visited {
+	font: 1em 'Roboto Condensed', sans-serif;
+}
+a {
+	color: #000;
+}
+.selected {
+	background: #ccc;
+}
+.selectedTab {
+	margin-left: 10px;
+	/* width: 32px; */
+	height: 32px;
+	background: #ccc;
+	border: 2px solid #000;
+	border-bottom: 0;
+	padding: 0 10px;
+}
+.selectedPage a {
+	margin-left: 10px;
+	/* width: 32px; */
+	background: #d64937;
+}
+.pagination {
+	//height: 40px;
+}
+.paginationBottom {
+	background: #ccc;
+	border: 2px solid #000;
+}
+.page a {
+	color: #000;
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        width: 100vw;
+        margin: 0 auto;
+    }
+    #containerMain {
+        flex-direction: column;
+    }
+    aside {
+        order: -1;
+        width: calc(100vw - 10px);
+    }
+}
+@media screen and (max-width: 600px) {
+
+}
