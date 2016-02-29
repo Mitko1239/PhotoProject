@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>-->
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="container">
-        <nav>
+        <nav id="top">
             <ul>
                 <li><h3>Site Name</h3></li>
                 <li><input type="email" placeholder="И-мейл"></li>
