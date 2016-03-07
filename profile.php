@@ -1,38 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dimit
- * Date: 29.2.2016 г.
- * Time: 17:44
- */
-?>
-
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Профил</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            $("#tabs").tabs();
-        });
-    </script>
-    <meta charset="utf-8">
-</head>
-<body>
-<div id="container">
-    <nav id="top">
-        <ul>
-            <li><h3>Site Name</h3></li>
-            <li><input type="email" placeholder="И-мейл"></li>
-            <li><input type="password" placeholder="Парола"></li>
-            <li><input type="submit" value="Вход"></li>
-        </ul>
-    </nav>
-
+    include "includes/main.php";
+    tplHeader("Профил"); ?>
     <div class="siteBox">
         <div id="profileBox">
             <div id="cover">

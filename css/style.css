@@ -12,7 +12,8 @@ html,body {
     color: #fff;
 }
 body {
-    background: url('http://club.wpeka.com/wp-content/uploads/2014/02/collageMaker_random_gallery1.jpeg') no-repeat center;
+    /*background: url('http://club.wpeka.com/wp-content/uploads/2014/02/collageMaker_random_gallery1.jpeg') no-repeat center;*/
+    background: #ccc;
     width: 100vw;
     height: 100vh;
     background-size: cover;
