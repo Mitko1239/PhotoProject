@@ -29,6 +29,8 @@ function tplHeader($title) {
         <nav id="top">
             <ul>
                 <li><h3><a href="index.php">Site Name</a></h3></li>
+                <li><input type="search" placeholder="Търсене..." /> <input type="submit" value="Go"> <input
+                        type="button" value="Разширено търсене"></li>
                 <?php if($loggedIn) { ?>
                 <li><a href="profile.php">Username</a></li>
                 <li>[<a href="#">Изход</a>]</li>

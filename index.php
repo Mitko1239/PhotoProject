@@ -3,13 +3,13 @@
     tplHeader("Начало"); ?>
         <div id="registerChoose">
             <div class="form">
-                <a href="#">
+                <a href="register.php?profileType=photographer">
                     <p><img class="homePageImg" src="img/camera-clipart.jpg" alt=""></p>
                     <p>Регистрация като фотограф</p>
                 </a>
             </div>
             <div class="form">
-                <a href="#">
+                <a href="register.php?profileType=model">
                     <p><img class="homePageImg" src="img/model.png" alt=""></p>
                     <p>Регистрация като модел</p>
                 </a>
@@ -23,5 +23,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+<?php tplFooter(); ?>

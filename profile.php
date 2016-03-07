@@ -32,12 +32,5 @@
                 </div>
             </div>
     </div>
-
-
-    <footer>
-        &copy; 2016 Whatever Corp.
-    </footer>
-
 </div>
-</body>
-</html>
+<?php tplFooter(); ?>
