@@ -17,7 +17,7 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script>
         $(function() {
-            $( "#tabs" ).tabs();
+            $("#tabs").tabs();
         });
     </script>
     <meta charset="utf-8">
