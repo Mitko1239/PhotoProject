@@ -1,9 +1,8 @@
 <?php
     include "includes/main.php";
     tplHeader("Начало", 'home'); ?>
-
-
-    			<div class="circleRegistrationComponent">
+        <div id="container1">
+    			<div id="anchor-point" class="circleRegistrationComponent">
 				<!-- Start Nav Structure -->
 				<button class="cn-button" id="cn-button">Регистрация</button>
 				<div class="cn-wrapper" id="cn-wrapper">
@@ -19,6 +18,30 @@
 				</div>
 				<!-- End of Nav Structure -->
 			</div>
+        </div>
+
+        <script>
+            var targetOffset = $("#anchor-point").offset().top;
+
+            var $w = $(window).scroll(function(){
+                if ( $w.scrollTop() > targetOffset ) {
+                    $('nav').css({"background-color":"rgba(0, 0, 0, 0.75)"});
+                    $('.loginForm').css({"display":"none"});
+                    $('.loginForm2').css({"display":"block"});
+                } else {
+                    $('nav').css({"background-color":"rgba(0, 0, 0, 0)"});
+                    $('.loginForm').css({"display":"block"});
+                    $('.loginForm2').css({"display":"none"});
+                }
+            });
+
+            $('.loginForm2').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+        </script>
 
 <!--        <div id="registerChoose">-->
 <!--            <div class="form">-->

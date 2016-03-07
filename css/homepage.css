@@ -13,17 +13,25 @@ html,body {
 }
 body {
     /*background: url('http://club.wpeka.com/wp-content/uploads/2014/02/collageMaker_random_gallery1.jpeg') no-repeat center;*/
-    /*background: url('../img/background.png') no-repeat center;*/
-    background: #333;
+    
+    /*background: #ccc;*/
     /*width: 100vw;*/
     /*height: 100vh;*/
-    background-size: cover;
+    
     margin: 0px auto;
+}
+
+#container1 {
+    width: 100vw;
+    height: auto;
+    background: url('../img/background.png') no-repeat center;
+    background-size: cover;
 }
 #registerChoose {
     display: flex;
     padding-top: calc(50vh - 80px);
 }
+
 p {
     margin: 0;
 }
@@ -35,21 +43,38 @@ p {
     justify-content: space-around;
 }
 #container {
-    width: 95vw;
-    margin: 5px auto 0;
-    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    height: 300vh;
     color: #fff;
 }
-nav, #profileMenu {
+nav {
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    left: 0;
     margin: 0 auto;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0);
     /*width: calc(100vw - 20px);*/
     width: 100%;
 }
-#profileMenu {
-    background-color: transparent;
-    width: 100%;
+.loginForm2, input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    background: dodgerblue;
+    border-radius: 5px;
+    padding: 10px 15px;
+    -webkit-box-shadow: 1px 1px 5px #000;
+    -moz-box-shadow: 1px 1px 5px #000;
+    box-shadow: 1px 1px 5px #000;
+}
+.loginForm2 {
+    display: none;
 }
 h1, h3 {
     padding: 0;
