@@ -1,6 +1,6 @@
 <?php
     include "includes/main.php";
-    tplHeader("Профил"); ?>
+    tplHeader("Профил", 'main'); ?>
     <div class="siteBox">
         <div id="profileBox">
             <div id="cover">
@@ -14,13 +14,13 @@
             </div>
 
             <div id="tabs">
-                <nav id="profileMenu">
+                <div id="profileMenu">
                     <ul>
                         <li><a href="#tabs-1">Информация</a></li>
                         <li><a href="#tabs-2">Снимки</a></li>
                         <li><a href="#tabs-3">Контакти</a></li>
                     </ul>
-                </nav>
+                </div>
                 <div id="tabs-1">
                     <h2>Информация</h2>
                 </div>

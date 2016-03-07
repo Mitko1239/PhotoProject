@@ -24,7 +24,7 @@ switch($type) {
         header("Location: index.php");
         break;
 }
-tplHeader("Регистрация"); ?>
+tplHeader("Регистрация", 'main'); ?>
 <div class="siteBox">
     <h1>Регистрация като <?=$profileType;?></h1>
 </div>
