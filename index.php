@@ -4,16 +4,16 @@
         <div id="container1">
     			<div id="anchor-point" class="circleRegistrationComponent">
 				<!-- Start Nav Structure -->
-				<button class="cn-button" id="cn-button">Регистрация</button>
+				<button class="cn-button" id="cn-button">Регистрация<br />като</button>
 				<div class="cn-wrapper" id="cn-wrapper">
 					<ul>
-						<li><a href="register.php?type=model"><span>Модел</span></a></li>
-						<li><a href="register.php?type=photographer"><span>Фотограф</span></a></li>
-						<li><a href="register.php?type=stylist"><span>Стилист</span></a></li>
-						<li><a href="register.php?type=makeupartist"><span>Гримьор</span></a></li>
-						<li><a href="register.php?type=designer"><span>Дизайнер</span></a></li>
-						<li><a href="register.php?type=coiffeur"><span>Коафьор</span></a></li>
-						<li><a href="register.php?type=?"><span>?</span></a></li>
+						<li><a href="register.php?type=model"><span>Модел <br /><img src="img/pencil.png" alt=""></span></a></li>
+						<li><a href="register.php?type=photographer"><span>Фотограф <br /><img src="img/pencil.png" alt=""></span></a></li>
+						<li><a href="register.php?type=stylist"><span>Стилист <br /><img src="img/pencil.png" alt=""></span></a></li>
+						<li><a href="register.php?type=makeupartist"><span>Гримьор <br /><img src="img/pencil.png" alt=""></span></a></li>
+						<li><a href="register.php?type=designer"><span>Дизайнер <br /><img src="img/pencil.png" alt=""></span></a></li>
+						<li><a href="register.php?type=coiffeur"><span>Коафьор <br /><img src="img/pencil.png" alt=""></span></a></li>
+<!--						<li><a href="register.php?type=?"><span>?</span></a></li>-->
 					 </ul>
 				</div>
 				<!-- End of Nav Structure -->

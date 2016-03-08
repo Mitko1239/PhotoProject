@@ -14,13 +14,14 @@ function tplHeader($title, $layout) {
     <head>
         <meta charset="UTF-8">
         <title><?=$title;?></title>
-        <?php if($layout == 'home') { ?>
-<link rel="stylesheet" href="css/homepage.css">
-        <?php } else { ?>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/inputs.css">
+        <?php if($layout == 'home') { ?>
+            <link rel="stylesheet" href="css/homepage.css">
         <?php } ?>
-<link rel="stylesheet" href="css/demo.css">
+        <link rel="stylesheet" href="css/demo.css">
         <link rel="stylesheet" href="css/component2.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script src="js/jquery.js"></script>
         <script src="js/modernizr-2.6.2.min.js"></script>
         <script src="js/polyfills.js"></script>
@@ -37,9 +38,9 @@ function tplHeader($title, $layout) {
     <div id="container">
         <nav id="top">
             <ul>
-                <li><h3><a href="index.php">PhotoBox</a></h3></li>
+                <li><h3 id="titleText"><a href="index.php">PhotoBox <p id="visibleVersion">alpha</p></a></h3></li>
                 <?php if($layout != 'home') { ?>
-                <li><input type="search" placeholder="Търсене..." /> <input type="submit" value="Go"> <input
+                <li><input type="search" placeholder="Търсене..." /> <input type="submit" id="searchBtn" value="Go"> <input
                         type="button" value="Разширено търсене"></li>
                 <?php } ?>
                 <?php if($loggedIn && $layout != 'home') { ?>
