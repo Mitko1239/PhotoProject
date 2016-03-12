@@ -12,28 +12,13 @@ function tplHeader($title) { ?>
     <head>
         <meta charset="UTF-8">
         <title><?=$title;?></title>
-        <link rel="stylesheet" href="test/main.css">
-        <script src="old/js/jquery.js"></script>
-        <script src="test/wheelnav.js"></script>
-        <script src="test/raphael.min.js"></script>
-        <script src="test/raphael.icons.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/piemenu.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/wheelnav.js"></script>
+        <script src="js/raphael.min.js"></script>
+        <script src="js/raphael.icons.min.js"></script>
         <style>
-            #piemenu > svg { width: 100%; height: 100%; }
-            #piemenu { height: 400px; width: 400px; /*margin:auto;*/ }
-            @media (max-width: 400px) { #piemenu { height: 300px; width: 300px; } }
-
-            [class|=wheelnav-piemenu-slice-basic] { fill: crimson; stroke: none; }
-            [class|=wheelnav-piemenu-slice-selected] { fill: crimson; stroke: none; }
-            [class|=wheelnav-piemenu-slice-hover] { fill: crimson;  stroke: none; fill-opacity: 0.77; cursor: pointer; }
-
-            [class|=wheelnav-piemenu-title-basic] { fill: #333; stroke: none; }
-            [class|=wheelnav-piemenu-title-selected] { fill: #fff; stroke: none; }
-            [class|=wheelnav-piemenu-title-hover] { fill: #222; stroke: none; cursor: pointer; }
-
-            .wheelnav-piemenu-spreader-in,
-            .wheelnav-piemenu-spreader-out { fill: #444; stroke: #444; stroke-width: 2; cursor: pointer; }
-            .wheelnav-piemenu-spreadertitle-in,
-            .wheelnav-piemenu-spreadertitle-out { fill: #eee; stroke: #444; cursor: pointer; }
         </style>
     </head>
     <body>
