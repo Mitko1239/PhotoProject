@@ -45,23 +45,23 @@ function tplHeader($title) { ?>
             <div class="flex" style="justify-content: space-between">
                 <ul class="flex">
                     <li><a href="index.php">Начало</a></li>
-                    <li><a class="nyi" href="#">Събития</a></li>
-                    <li><a class="nyi" href="#">Класации</a></li>
-                    <li class="dropdown"><a class="nyi" href="#">Профили</a>
+                    <li><a class="nyi" href="javascript:void(0);">Събития</a></li>
+                    <li><a class="nyi" href="javascript:void(0);">Класации</a></li>
+                    <li class="dropdown"><a class="nyi" href="javascript:void(0);">Профили</a>
                         <ul class="dropdownNav">
-                            <li><a class="nyi" href="">Модели</a></li>
-                            <li><a class="nyi" href="">Фотографи</a></li>
-                            <li><a class="nyi" href="">Стилисти</a></li>
-                            <li><a class="nyi" href="">Гримьори</a></li>
-                            <li><a class="nyi" href="">Дизайнери</a></li>
-                            <li><a class="nyi" href="">Коафьори</a></li>
+                            <li><a class="nyi" href="javascript:void(0);">Модели</a></li>
+                            <li><a class="nyi" href="javascript:void(0);">Фотографи</a></li>
+                            <li><a class="nyi" href="javascript:void(0);">Стилисти</a></li>
+                            <li><a class="nyi" href="javascript:void(0);">Гримьори</a></li>
+                            <li><a class="nyi" href="javascript:void(0);">Дизайнери</a></li>
+                            <li><a class="nyi" href="javascript:void(0);">Коафьори</a></li>
                         </ul>
                     </li>
                 </ul>
 
                 <ul class="flex justifyEnd">
-                    <li><a class="nyi" href="">Username</a></li>
-                    <li>[<a class="nyi" href="#">Изход</a>]</li>
+                    <li><a class="nyi" href="javascript:void(0);">Username</a></li>
+                    <li>[<a class="nyi" href="javascript:void(0);">Изход</a>]</li>
 
                     <li><a href="login.php">Вход</a></li>
                     <li><a href="register.php">Регистрация</a></li>
