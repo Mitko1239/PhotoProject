@@ -95,7 +95,7 @@ header, nav, main, footer {
 header {
     margin-top: 0;
 }
-nav {
+nav, #profileMenu {
     background: crimson;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
@@ -122,4 +122,82 @@ legend {
     padding: 10px;
     margin: 10px;
     background: rgba(10, 10, 10, 0.5);
+}
+
+#loginForm {
+    width: 30%;
+    margin: 0 auto 10px;
+}
+.dropdown {
+    position: relative;
+}
+.dropdownNav {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: 101;
+    border: 1px solid #fff;
+    border-top: 0;
+    background: crimson;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateZ(0);
+    transform: translateY(10%);
+    transition: all 0.5s ease 0s, visibility 0s linear 0.5s; /* the last value is the transition-delay for visibility */
+}
+.dropdown:hover .dropdownNav {
+    visibility: visible; /* shows sub-menu */
+    opacity: 1;
+    transform: translateX(0%);
+    transition-delay: 0s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+.dropdownNav li {
+    padding-right: 0 !important;
+    margin: 0;
+}
+.dropdownNav li a {
+    width: calc(100% - 10px);
+    display: flex;
+    padding: 5px;
+}
+
+.dropdownNav li a:hover {
+
+    background: #d64937;
+}
+
+#cover {
+    /*background: url('https://placehold.it/2000x2000') no-repeat center;*/
+    background-size: cover;
+    width: 90%;
+    height: 200px;
+    /*height: 300px;*/
+    margin: 0 auto;
+    position: relative;
+}
+
+#profilePic {
+    border: 2px solid #000;
+    width: 150px;
+    height: 150px;
+}
+
+#profileName {
+    padding-left: 10px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+#row1 {
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+#tabs {
+    width: 90%;
+    background: darkcyan;
+    margin: -410px auto 0;
 }

@@ -1,6 +1,6 @@
 <?php
 include "includes/main.php";
-tplHeader("Начало"); ?>
+tplHeader("Регистрация"); ?>
     <main>
         <!-- data-wheelnav-spreader data-wheelnav-spreaderpath='PieSpreader'-->
         <div class="flex">
@@ -78,7 +78,7 @@ tplHeader("Начало"); ?>
                                 </tr>
                                 <tr>
                                     <td>Дата на раждане: </td>
-                                    <td><input type="date" placeholder="" id="regBirthdate" name="regBirthdate" /></td>
+                                    <td><input type="date" placeholder="" id="regBirthdate" name="regBirthdate" max="<?=date("Y-m-d", strtotime("13 years ago"));?>" /></td>
                                 </tr>
                                 <tr>
                                     <td>Пол: </td>
