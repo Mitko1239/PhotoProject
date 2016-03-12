@@ -2,14 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: dimit
- * Date: 7.3.2016 ã.
- * Time: 15:48
+ * Date: 12.3.2016 Ð³.
+ * Time: 18:49
  */
 
 function tplFooter() { ?>
-    <footer>
-        &copy; 2016 Whatever Corp. Very much work in progress
-    </footer>
+            <footer>
+            <span>&copy; 2016 COPYRIGHT_MESSAGE</span>
+        </footer>
+    </div>
 </body>
 </html>
-<?php } ?>
+<?php }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Browser viewport size tester</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="old/css/main.css">
     <meta content="True" name="HandheldFriendly">
     <script src="js/jquery.js" type="text/javascript"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -60,7 +60,7 @@
 
     <nav>
         <ul>
-            <li><a href="index.php">index</a></li>
+            <li><a href="old/index.php">index</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#">4</a></li>
