@@ -1,0 +1,22 @@
+.demo {
+    width:100%;
+    min-height: 40px;
+}
+.lightSlider {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+.lightSlider li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+}
+.lightSlider li img {
+    display: block;
+    height: auto;
+    margin-right: 50px;
+    max-width: 128px;
+    /*max-width: 100%;*/
+}

@@ -1,0 +1,17 @@
+@media screen and (max-width: 800px) {
+    #container {
+        width: 100vw;
+        margin: 0 auto;
+    }
+    #header, #nav ul {
+        flex-direction: column;
+    }
+    #profileBox {
+        width: 100%;
+        padding: 0;
+    }
+    #piemenu, #piemenu2 {
+        width: 0 !important;
+        height: 0 !important;
+    }
+}

@@ -1,28 +1,33 @@
 <?php
     include "includes/main.php";
     tplHeader("Профил", 'main'); ?>
+    <script>
+        $(function() {
+            $("#tabs").tabs();
+        });
+    </script>
     <main>
         <div id="profileBox">
             <div id="cover">
                 <div id="row1">
                     <div id="profilePic"><img src="https://placehold.it/150x150" alt=""></div>
                     <div id="profileName">
-                        <h1>Username</h1>
+                        <h1>Димитър Димитров (undefined)</h1>
                         <em>Фотограф</em>
                     </div>
                 </div>
             </div>
-
             <div id='piemenu2' data-wheelnav
-                 data-wheelnav-slicepath='PieSlice'
-
+                 data-wheelnav-slicepath='DonutSlice'
                  data-wheelnav-rotateoff
-                 data-wheelnav-navangle='202.5'
+                 data-wheelnav-navangle='252'
+                 data-wheelnav-titleheight='36'
                  data-wheelnav-cssmode
                  data-wheelnav-init>
-                <div data-wheelnav-navitemimg='img/info.png' onmouseup='alert("Place your logic here.");'></div>
-                <div data-wheelnav-navitemimg='img/photos.png' onmouseup='alert("Place your logic here.");'></div>
-                <div data-wheelnav-navitemimg='img/contacts.png' onmouseup='alert("Place your logic here.");'></div>
+                <div data-wheelnav-navitemimg='img/info.png' onmouseup='showTab(1);'></div>
+                <div data-wheelnav-navitemimg='img/photos.png' onmouseup='showTab(2);'></div>
+                <div data-wheelnav-navitemimg='img/contacts.png' onmouseup='showTab(3);'></div>
+                <div data-wheelnav-navitemimg='???' onmouseup='alert("Place your logic here.");'></div>
                 <div data-wheelnav-navitemimg='???' onmouseup='alert("Place your logic here.");'></div>
             </div>
             <script>
@@ -34,26 +39,19 @@
                     $("#currentDesc").html($('#'+types[$value]+'Desc').html());
                 }
                 var piemenu = new wheelnav('piemenu2');
-//                piemenu.spreaderInTitle = icon.plus;
-//                piemenu.spreaderOutTitle = icon.cross;
-//                piemenu.spreaderInTitle = 'меню';
-//                piemenu.spreaderOutTitle = 'затвори';
-//                piemenu.spreaderRadius = piemenu.wheelRadius * 0.34;
+                piemenu.clockwise = false;
                 piemenu.wheelRadius = piemenu.wheelRadius * 0.83;
                 piemenu.navItemsContinuous = true;
-                piemenu.sliceAngle = 45;
+                piemenu.sliceAngle = 36;
                 piemenu.createWheel();
                 piemenu.setTooltips(['Информация','Снимки','Контакти','3']);
             </script>
-
             <div id="tabs">
-<!--                <div id="profileMenu">-->
-<!--                    <ul>-->
-<!--                        <li><a href="#tabs-1">Информация</a></li>-->
-<!--                        <li><a href="#tabs-2">Снимки</a></li>-->
-<!--                        <li><a href="#tabs-3">Контакти</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
+                <ul class="hidden">
+                    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                    <li><a href="#tabs-2">Proin dolor</a></li>
+                    <li><a href="#tabs-3">Aenean lacinia</a></li>
+                </ul>
                 <div id="tabs-1">
                     <h2>Информация</h2>
                 </div>

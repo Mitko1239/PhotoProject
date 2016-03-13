@@ -15,9 +15,9 @@
 .wheelnav-piemenu-spreadertitle-in,
 .wheelnav-piemenu-spreadertitle-out { fill: #eee; stroke: #444; cursor: pointer; }
 
-#piemenu2 > svg { width: 100%; height: 100%; margin-top: -190px; }
-#piemenu2 { height: 400px; width: 400px; margin:auto; }
-@media (max-width: 400px) { #piemenu2 { height: 300px; width: 300px; } }
+#piemenu2 > svg { width: 100%; height: 100%; }
+#piemenu2 { height: 300px; width: 300px; margin:auto; position: absolute; left: -145px; top: 160px; z-index: 0; }
+@media (max-width: 300px) { #piemenu2 { height: 200px; width: 200px; } }
 
 [class|=wheelnav-piemenu2-slice-basic] { fill: crimson; stroke: none; }
 [class|=wheelnav-piemenu2-slice-selected] { fill: crimson; stroke: none; }

@@ -11,6 +11,10 @@
     display: flex;
     width: 100%;
 }
+
+.alignCenter {
+    align-items: center;
+}
 .swapFlex {
     flex-direction: column;
 }
@@ -23,15 +27,32 @@
 .justifyEnd {
     justify-content: flex-end;
 }
+.hidden {
+    display: none;
+}
 .nyi {
     color: #ccc !important;
     text-decoration: line-through !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.9em;
+    margin-bottom: 10px;
+}
 
 
 #version {
+    position: relative;
     font-size: 1.2em;
+}
+#version a {
+    display: flex;
+    height: 100%;
 }
 #versionBranch {
     color: crimson;
@@ -78,6 +99,7 @@ nav#top ul li a {
 
 }
 #container {
+    position: relative;
     width: calc(95vw - 10px);
     max-width: 1800px;
     margin: 5px auto 20px;
@@ -85,6 +107,12 @@ nav#top ul li a {
     background: rgba(50, 50, 50, 1);
     border: 2px solid rgba(25, 25, 25, 0.7);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+#search {
+    min-width: 280px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
 }
 header, nav, main, footer {
     width: calc(100% - 10px);
@@ -95,6 +123,17 @@ header, nav, main, footer {
 header {
     margin-top: 0;
 }
+#logo {
+    background: url('../img/logo.png') center no-repeat;
+    background-size: 100%;
+    width: 92px;
+    height: 72.5px;
+}
+#logoText {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 1.3em;
+}
 nav, #profileMenu {
     background: crimson;
     border-top: 1px solid #fff;
@@ -102,6 +141,8 @@ nav, #profileMenu {
     margin-top: 0;
 }
 main {
+    width: calc(100% - 50px);
+    padding: 25px;
     background: rgba(25, 25, 25, 1);
     -webkit-box-shadow: inset 0 0 15px #000;
     -moz-box-shadow: inset 0 0 15px #000;
@@ -167,12 +208,20 @@ legend {
     background: #d64937;
 }
 
+#profileBox {
+    /*background-color: darkgreen;*/
+    width: calc(80% - 25px);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+}
+
 #cover {
     /*background: url('https://placehold.it/2000x2000') no-repeat center;*/
     background-size: cover;
-    width: 90%;
-    height: 200px;
-    /*height: 300px;*/
+    box-shadow: 0px 0px 10px #000;
+    background: rgba(68, 68, 68, 1);
+    width: 100%;
     margin: 0 auto;
     position: relative;
 }
@@ -190,14 +239,19 @@ legend {
 
 #row1 {
     padding: 5px;
-    position: absolute;
     bottom: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 #tabs {
-    width: 90%;
-    background: darkcyan;
-    margin: -410px auto 0;
+    position: relative;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: rgba(10, 10, 10, 1);
+    /*box-shadow: inset 0px 0px 10px #000;*/
+    box-shadow: 0px 0px 10px #000;
+    height: 400px;
+    z-index: 201;
+    margin: 0 auto;
 }
