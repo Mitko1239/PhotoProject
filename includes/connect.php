@@ -2,7 +2,7 @@
 /**
  * Created by PhpStorm.
  * User: dimit
- * Date: 7.3.2016 �.
+ * Date: 7.3.2016 г.
  * Time: 15:49
  */
 

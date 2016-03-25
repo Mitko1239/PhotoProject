@@ -66,6 +66,11 @@ if (!logged_in()) {
                     <!--            </script>-->
                     <div id="tabs">
                         <ul>
+                            <?php if ($cUser == $global_id) { ?>
+                                <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=edit">Редакция
+                                        на профил</a>
+                                </li>
+                            <?php } ?>
                             <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=info">Информация</a>
                             </li>
                             <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=photos">Снимки</a>
@@ -80,6 +85,13 @@ if (!logged_in()) {
                                 ->diff(new DateTime('now', $tz))
                                 ->y;
                             switch ($cTab) {
+                                case 'edit':
+                                    ?>
+                                    <h2>Редакция на профил</h2>
+                                    <p>NYI</p>
+                                    <?php
+                                    break;
+
                                 case 'info':
                                 default:
                                     ?>
