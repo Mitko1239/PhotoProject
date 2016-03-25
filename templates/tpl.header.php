@@ -5,8 +5,11 @@
  * Date: 12.3.2016 г.
  * Time: 18:44
  */
-
-function tplHeader($title) { ?>
+ob_start();
+function tplHeader($title)
+{
+    $link = mysqli_connect("localhost", "mitkocom_pp", "m1tk01239", "mitkocom_photoproject") or die("Error " . mysqli_error($link));
+    $global_id = $_COOKIE['id'] ?>
     <!doctype html>
     <html lang="en">
     <head>
@@ -28,7 +31,7 @@ function tplHeader($title) { ?>
         <!--    Google Material Design Icons-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <title><?=$title;?></title>
+        <title><?= $title; ?> - WheelPhoto</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/media.css">
         <link rel="stylesheet" href="css/piemenu.css">
@@ -110,11 +113,24 @@ function tplHeader($title) { ?>
                 </ul>
 
                 <ul class="flex justifyEnd">
-                    <li><a href="profile.php">Профил</a></li>
-                    <li>[<a class="nyi" href="javascript:void(0);">Изход</a>]</li>
-
+                    <?php if (logged_in()) {
+                        if ($users = mysqli_query($link, "SELECT * FROM `mitkocom_photoproject`.`users` WHERE id='" . $global_id . "'")) {
+                            $row_cnt = mysqli_num_rows($users);
+//                        printf("Result set has %d rows.\n", $row_cnt);
+                            if ($row_cnt > 0) {
+                                $usersf = mysqli_fetch_assoc($users);
+//                            $username = $usersf['username'];
+                            }
+                            ?>
+                            <li><a href="profile.php"><?= $usersf['username']; ?></a></li>
+                            <li><a href="logout.php">Изход</a></li>
+                            <?php
+                            mysqli_free_result($users);
+                        }
+                    } else { ?>
                     <li><a href="login.php">Вход</a></li>
                     <li><a href="register.php">Регистрация</a></li>
+                    <?php } ?>
 
                     <li class="loginForm">
                         <!--<input type="email" placeholder="И-мейл">-->

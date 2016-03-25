@@ -3,7 +3,7 @@ include "includes/main.php";
 tplHeader("Регистрация"); ?>
     <main>
         <!-- data-wheelnav-spreader data-wheelnav-spreaderpath='PieSpreader'-->
-        <div class="flex">
+        <div class="flex" id="registerPage">
             <div id='piemenu' data-wheelnav
                  data-wheelnav-slicepath='DonutSlice'
 
@@ -11,12 +11,12 @@ tplHeader("Регистрация"); ?>
                  data-wheelnav-titleheight='40'
                  data-wheelnav-cssmode
                  data-wheelnav-init>
-                <div data-wheelnav-navitemimg='img/model.png' onmouseup='setProfileType(0,"модел");'></div>
-                <div data-wheelnav-navitemimg='img/photographer.png' onmouseup='setProfileType(1,"фотограф");'></div>
-                <div data-wheelnav-navitemimg='img/stylist.png' onmouseup='setProfileType(2,"стилист");'></div>
-                <div data-wheelnav-navitemimg='img/makeupartist.png' onmouseup='setProfileType(3,"гримьор");'></div>
-                <div data-wheelnav-navitemimg='img/designer.png' onmouseup='setProfileType(4,"дизайнер");'></div>
-                <div data-wheelnav-navitemimg='img/coiffeur.png' onmouseup='setProfileType(5,"коафьор");'></div>
+                <div data-wheelnav-navitemimg='img/model.png' onmouseup='setProfileType(1,"модел");'></div>
+                <div data-wheelnav-navitemimg='img/photographer.png' onmouseup='setProfileType(2,"фотограф");'></div>
+                <div data-wheelnav-navitemimg='img/stylist.png' onmouseup='setProfileType(3,"стилист");'></div>
+                <div data-wheelnav-navitemimg='img/makeupartist.png' onmouseup='setProfileType(4,"гримьор");'></div>
+                <div data-wheelnav-navitemimg='img/designer.png' onmouseup='setProfileType(5,"дизайнер");'></div>
+                <div data-wheelnav-navitemimg='img/coiffeur.png' onmouseup='setProfileType(6,"коафьор");'></div>
             </div>
             <script>
                 function setProfileType($value, $name) {

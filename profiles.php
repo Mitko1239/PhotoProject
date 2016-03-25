@@ -1,4 +1,5 @@
 <?php
+//TODO: Rewrite this to show all profiles from a certain category
 include "includes/main.php";
 tplHeader("Профил", 'main');
 $cTab = $_GET['tab'];

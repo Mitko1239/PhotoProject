@@ -31,6 +31,7 @@
     display: none;
 }
 .nyi {
+    cursor: not-allowed;
     color: #ccc !important;
     text-decoration: line-through !important;
 }
@@ -220,7 +221,7 @@ legend {
     /*background: url('https://placehold.it/2000x2000') no-repeat center;*/
     background-size: cover;
     box-shadow: 0px 0px 10px #000;
-    background: rgba(68, 68, 68, 1);
+    background: rgba(68, 68, 68, 0.9);
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -228,8 +229,8 @@ legend {
 
 #profilePic {
     border: 2px solid #000;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 #profileName {
@@ -246,12 +247,46 @@ legend {
 
 #tabs {
     position: relative;
-    width: calc(100% - 20px);
-    padding: 10px;
-    background: rgba(10, 10, 10, 1);
+    width: 100%;
+    /*padding: 10px;*/
+    background: rgba(10, 10, 10, 0.9);
     /*box-shadow: inset 0px 0px 10px #000;*/
     box-shadow: 0px 0px 10px #000;
     height: 400px;
     z-index: 201;
     margin: 0 auto;
+}
+
+.admin {
+    color: crimson;
+    font-weight: bold;
+}
+
+#tabs div {
+    padding: 10px;
+}
+
+#tabs ul {
+    margin: 0;
+    width: calc(100% - 10px);
+    background: crimson;
+    padding: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+#tabs ul li {
+    padding: 0 20px;
+}
+
+#tabs ul li:first-child {
+    padding-left: 0;
+}
+
+#tabs ul li:last-child {
+    padding-right: 0;
 }
