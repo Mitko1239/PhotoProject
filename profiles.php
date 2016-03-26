@@ -3,7 +3,7 @@
 include "includes/main.php";
 tplHeader("Профил", 'main');
 $cTab = $_GET['tab'];
-$cUser = (isset($_GET['user']) && $_GET['user'] != null) ? $_GET['user'] : $global_id;
+$cUser = (isset($_GET['user']) && $_GET['user'] != null) ? $_GET['user'] : $GLOBALS['id'];
 if (!logged_in()) {
     die(header("Location: index.php"));
 }
@@ -67,11 +67,12 @@ if (!logged_in()) {
                     <!--            </script>-->
                     <div id="tabs">
                         <ul>
-                            <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=info">Информация</a>
+                            <li><a href="<?= ($cUser != $GLOBALS['id']) ? '?user=' . $cUser . '&' : '?'; ?>tab=info">Информация</a>
                             </li>
-                            <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=photos">Снимки</a>
+                            <li><a href="<?= ($cUser != $GLOBALS['id']) ? '?user=' . $cUser . '&' : '?'; ?>tab=photos">Снимки</a>
                             </li>
-                            <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=contacts">Контакти</a>
+                            <li>
+                                <a href="<?= ($cUser != $GLOBALS['id']) ? '?user=' . $cUser . '&' : '?'; ?>tab=contacts">Контакти</a>
                             </li>
                         </ul>
                         <div>

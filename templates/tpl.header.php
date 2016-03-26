@@ -5,11 +5,11 @@
  * Date: 12.3.2016 г.
  * Time: 18:44
  */
+require 'includes/connect.php';
 ob_start();
 function tplHeader($title)
 {
-    $link = mysqli_connect("localhost", "mitkocom_pp", "m1tk01239", "mitkocom_photoproject") or die("Error " . mysqli_error($link));
-    $global_id = $_COOKIE['id'] ?>
+    ?>
     <!doctype html>
     <html lang="en">
     <head>
@@ -44,32 +44,6 @@ function tplHeader($title)
             function jump(hash) {
                 $(document.body).scrollTop($('#'+hash).offset().top);
             }
-
-            function showTab(tab) {
-                switch(tab) {
-                    case 1:
-                        $("#tabs-1").show();
-                        $("#tabs-2").hide();
-                        $("#tabs-3").hide();
-                        break;
-                    case 2:
-                        $("#tabs-2").show();
-                        $("#tabs-1").hide();
-                        $("#tabs-3").hide();
-                        break;
-                    case 3:
-                        $("#tabs-3").show();
-                        $("#tabs-1").hide();
-                        $("#tabs-2").hide();
-                        break;
-                    default:
-                        $("#tabs-1").show();
-                        $("#tabs-2").hide();
-                        $("#tabs-3").hide();
-                        break;
-                }
-            }
-
         </script>
         <script src="js/wheelnav.js"></script>
         <script src="js/raphael.min.js"></script>
@@ -114,7 +88,7 @@ function tplHeader($title)
 
                 <ul class="flex justifyEnd">
                     <?php if (logged_in()) {
-                        if ($users = mysqli_query($link, "SELECT * FROM `mitkocom_photoproject`.`users` WHERE id='" . $global_id . "'")) {
+                        if ($users = mysqli_query($GLOBALS['link'], "SELECT * FROM `mitkocom_photoproject`.`users` WHERE id='" . $GLOBALS['id'] . "'")) {
                             $row_cnt = mysqli_num_rows($users);
 //                        printf("Result set has %d rows.\n", $row_cnt);
                             if ($row_cnt > 0) {

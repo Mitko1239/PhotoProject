@@ -18,7 +18,7 @@ include "./templates/index.php";
 
 //$global_user_id = output_userid();
 $global_user_id = user_id_from_username($_SESSION['username']);
-$global_id = $_COOKIE['id'];
+$GLOBALS['id'] = $_COOKIE['id'];
 $errors = array();
 
 $loggedIn = $_SESSION['username'];

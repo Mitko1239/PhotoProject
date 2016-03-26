@@ -60,7 +60,7 @@ function isAdmin()
 {
 //	$id = output_userid();
     global $link;
-    $query = mysqli_query($link, "SELECT COUNT(`group`) FROM `mitkocom_photoproject`.`users` WHERE `username`='$_COOKIE[username]' AND `group`=2");
+    $query = mysqli_query($GLOBALS['link'], "SELECT COUNT(`group`) FROM `mitkocom_photoproject`.`users` WHERE `username`='$_COOKIE[username]' AND `group`=2");
     return (mysqli_result($query, 0) == 1) ? true : false;
     //return true;
 }
@@ -69,7 +69,7 @@ function isOwner()
 {
     global $link;
     if (isAdmin() === true) {
-        $query = mysqli_query($link, "SELECT COUNT(`group`) FROM `mitkocom_photoproject`.`users` WHERE `username`='Mitko1239' AND `group`=2");
+        $query = mysqli_query($GLOBALS['link'], "SELECT COUNT(`group`) FROM `mitkocom_photoproject`.`users` WHERE `username`='Mitko1239' AND `group`=2");
         return (mysqli_result($query, 0) == 1) ? true : false;
     }
 }
@@ -78,7 +78,7 @@ function user_exists($username)
 {
     global $link;
     $username = sanitize($username);
-    $query = mysqli_query($link, "SELECT COUNT(`id`) FROM `mitkocom_photoproject`.`users` WHERE `username`='$username'");
+    $query = mysqli_query($GLOBALS['link'], "SELECT COUNT(`id`) FROM `mitkocom_photoproject`.`users` WHERE `username`='$username'");
     return (mysqli_result($query, 0) == 1) ? true : false;
 }
 
@@ -86,7 +86,7 @@ function user_active($username)
 {
     global $link;
     $username = sanitize($username);
-    $query = mysqli_query($link, "SELECT COUNT(`id`) FROM `mitkocom_photoproject`.`users` WHERE `username`='$username' AND `active`=1");
+    $query = mysqli_query($GLOBALS['link'], "SELECT COUNT(`id`) FROM `mitkocom_photoproject`.`users` WHERE `username`='$username' AND `active`=1");
     return (mysqli_result($query, 0) == 1) ? true : false;
 }
 
@@ -94,7 +94,7 @@ function user_id_from_username($username)
 {
     global $link;
     $username = sanitize($username);
-    $query = mysqli_query($link, "SELECT `id` FROM `mitkocom_photoproject`.`users` WHERE `username`='$username'");
+    $query = mysqli_query($GLOBALS['link'], "SELECT `id` FROM `mitkocom_photoproject`.`users` WHERE `username`='$username'");
     return mysqli_result($query, 0, 'id');
 }
 
@@ -102,7 +102,7 @@ function username_from_userid($user_id)
 {
     global $link;
     //$username = sanitize($username);
-    $query = mysqli_query($link, "SELECT `username` FROM `mitkocom_photoproject`.`users` WHERE `id`='$user_id'");
+    $query = mysqli_query($GLOBALS['link'], "SELECT `username` FROM `mitkocom_photoproject`.`users` WHERE `id`='$user_id'");
     return mysqli_result($query, 0, 'username');
 }
 
@@ -114,7 +114,7 @@ function login($username, $password)
 
     $username = sanitize($username);
 
-    if ($userDB = mysqli_query($link, "SELECT password FROM `mitkocom_photoproject`.`users` WHERE `username`='$username'")) {
+    if ($userDB = mysqli_query($GLOBALS['link'], "SELECT password FROM `mitkocom_photoproject`.`users` WHERE `username`='$username'")) {
         $row_cnt_userdb = mysqli_num_rows($userDB);
         $userDBf = mysqli_fetch_assoc($userDB);
         mysqli_free_result($userDB);

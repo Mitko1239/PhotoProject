@@ -2,7 +2,7 @@
 include "includes/main.php";
 tplHeader("Профил", 'main');
 $cTab = $_GET['tab'];
-$cUser = (isset($_GET['user']) && $_GET['user'] != null) ? $_GET['user'] : $global_id;
+$cUser = (isset($_GET['user']) && $_GET['user'] != null) ? $_GET['user'] : $GLOBALS['id'];
 if (!logged_in()) {
     die(header("Location: index.php"));
 }
@@ -18,7 +18,7 @@ if (!logged_in()) {
               JOIN types t ON u.typeid=t.typeid
               JOIN genders gn ON u.genderid=gn.genderid
               WHERE id='$cUser'";
-        if ($users = mysqli_query($link, $sql)) {
+        if ($users = mysqli_query($GLOBALS['link'], $sql)) {
             $row_cnt = mysqli_num_rows($users);
 //            printf("Result set has %d rows.\n", $row_cnt);
             if ($row_cnt > 0) {
@@ -66,16 +66,18 @@ if (!logged_in()) {
                     <!--            </script>-->
                     <div id="tabs">
                         <ul>
-                            <?php if ($cUser == $global_id) { ?>
-                                <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=edit">Редакция
+                            <?php if ($cUser == $GLOBALS['id']) { ?>
+                                <li>
+                                    <a href="<?= ($cUser != $GLOBALS['id']) ? '?user=' . $cUser . '&' : '?'; ?>tab=edit">Редакция
                                         на профил</a>
                                 </li>
                             <?php } ?>
-                            <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=info">Информация</a>
+                            <li><a href="<?= ($cUser != $GLOBALS['id']) ? '?user=' . $cUser . '&' : '?'; ?>tab=info">Информация</a>
                             </li>
-                            <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=photos">Снимки</a>
+                            <li><a href="<?= ($cUser != $GLOBALS['id']) ? '?user=' . $cUser . '&' : '?'; ?>tab=photos">Снимки</a>
                             </li>
-                            <li><a href="<?= ($cUser != $global_id) ? '?user=' . $cUser . '&' : '?'; ?>tab=contacts">Контакти</a>
+                            <li>
+                                <a href="<?= ($cUser != $GLOBALS['id']) ? '?user=' . $cUser . '&' : '?'; ?>tab=contacts">Контакти</a>
                             </li>
                         </ul>
                         <div>

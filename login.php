@@ -9,7 +9,7 @@ tplHeader("Вход");
                 if ($_POST['doLogin']) {
                     $postEmail = $_POST['logEmail'];
                     $postPass = sha1($_POST['logPass']);
-                    if ($users = mysqli_query($link, "SELECT * FROM `mitkocom_photoproject`.`users` WHERE email='$postEmail' AND password='$postPass'")) {
+                    if ($users = mysqli_query($GLOBALS['link'], "SELECT * FROM `mitkocom_photoproject`.`users` WHERE email='$postEmail' AND password='$postPass'")) {
                         $row_cnt = mysqli_num_rows($users);
                         //printf("Result set has %d rows.\n", $row_cnt_00);
                         if ($row_cnt > 0) {
