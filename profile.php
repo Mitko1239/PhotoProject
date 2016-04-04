@@ -13,16 +13,19 @@ if (!logged_in()) {
     <?php if (logged_in()) {
         $sql =
             "SELECT u.username, firstname, lastname, email, birthdate, u.groupid,
-              t.name 'type', gn.name 'gender'
+              t.name 'type', gn.name 'gender', up.*
               FROM users u
               JOIN types t ON u.typeid=t.typeid
               JOIN genders gn ON u.genderid=gn.genderid
-              WHERE id='$cUser'";
+              JOIN userprefs up ON u.id=up.userid
+              WHERE id='$cUser';";
         if ($users = mysqli_query($GLOBALS['link'], $sql)) {
             $row_cnt = mysqli_num_rows($users);
 //            printf("Result set has %d rows.\n", $row_cnt);
             if ($row_cnt > 0) {
                 $usersf = mysqli_fetch_assoc($users);
+//                var_dump($usersf);
+                $ifUsername = ($usersf['showUsername']) ? ' (' . $usersf['username'] . ')' : '';
                 $type = ($usersf['groupid'] == 2) ? "<span class=\"admin\">Администратор</span>" : $usersf['type'];
                 ?>
                 <div id="profileBox">
@@ -30,7 +33,7 @@ if (!logged_in()) {
                         <div id="row1">
                             <div id="profilePic"><img src="https://placehold.it/100x100" alt=""></div>
                             <div id="profileName">
-                                <h1><?= $usersf['firstname'] . ' ' . $usersf['lastname'] . ' (' . $usersf['username'] . ')'; ?></h1>
+                                <h1><?= ($usersf['showFullName'] == 1) ? $usersf['firstname'] . ' ' . $usersf['lastname'] . $ifUsername : $usersf['username']; ?></h1>
                                 <em><?= $type; ?></em>
                             </div>
                         </div>
@@ -88,6 +91,7 @@ if (!logged_in()) {
                                 ->y;
                             switch ($cTab) {
                                 case 'edit':
+                                    5
                                     ?>
                                     <h2>Редакция на профил</h2>
                                     <p>NYI</p>

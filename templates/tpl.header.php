@@ -74,14 +74,14 @@ function tplHeader($title)
                     <li><a href="index.php">Начало</a></li>
                     <li><a class="nyi" href="javascript:void(0);">Събития</a></li>
                     <li><a class="nyi" href="javascript:void(0);">Класации</a></li>
-                    <li class="dropdown"><a class="nyi" href="javascript:void(0);">Профили</a>
+                    <li class="dropdown"><a href="profiles.php">Профили</a>
                         <ul class="dropdownNav">
-                            <li><a class="nyi" href="javascript:void(0);">Модели</a></li>
-                            <li><a class="nyi" href="javascript:void(0);">Фотографи</a></li>
-                            <li><a class="nyi" href="javascript:void(0);">Стилисти</a></li>
-                            <li><a class="nyi" href="javascript:void(0);">Гримьори</a></li>
-                            <li><a class="nyi" href="javascript:void(0);">Дизайнери</a></li>
-                            <li><a class="nyi" href="javascript:void(0);">Коафьори</a></li>
+                            <li><a href="profiles.php?type=1">Модели</a></li>
+                            <li><a href="profiles.php?type=2">Фотографи</a></li>
+                            <li><a href="profiles.php?type=3">Стилисти</a></li>
+                            <li><a href="profiles.php?type=4">Гримьори</a></li>
+                            <li><a href="profiles.php?type=5">Дизайнери</a></li>
+                            <li><a href="profiles.php?type=6">Коафьори</a></li>
                         </ul>
                     </li>
                 </ul>
