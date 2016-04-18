@@ -73,7 +73,7 @@ function tplHeader($title)
                 <ul class="flex">
                     <li><a href="index.php">Начало</a></li>
                     <li><a class="nyi" href="javascript:void(0);">Събития</a></li>
-                    <li><a class="nyi" href="javascript:void(0);">Класации</a></li>
+                    <li><a href="tops.php">Класации</a></li>
                     <li class="dropdown"><a href="profiles.php">Профили</a>
                         <ul class="dropdownNav">
                             <li><a href="profiles.php?type=1">Модели</a></li>

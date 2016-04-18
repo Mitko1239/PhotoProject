@@ -1,6 +1,6 @@
 <?php
 include "includes/main.php";
-tplHeader("Начало");
+tplHeader("Профили");
 $type = $_GET['type'];
 ?>
     <style>
@@ -15,45 +15,53 @@ $type = $_GET['type'];
             "SELECT u.*, t.name 'typename' FROM users u
                         JOIN types t ON t.typeid=u.typeid";
         if (isset($type) && $type != null && is_numeric($type)) {
-            $sql .= "WHERE u.typeid='$type'";
+            $sql .= " WHERE u.typeid='$type'";
         }
         if ($users = mysqli_query($GLOBALS['link'], $sql)) {
             $row_cnt = mysqli_num_rows($users);
-            printf("Result set has %d rows.\n", $row_cnt);
+        //            printf("Result set has %d rows.\n", $row_cnt);
             if ($row_cnt > 0) {
                 if (isset($type) && $type != null && is_numeric($type)) {
                     $types = mysqli_query($GLOBALS['link'], $sql);
                     $typesf = mysqli_fetch_assoc($types);
+
                     echo '<h2>Профили на ' . mb_strtolower($typesf['typename']) . 'и</h2>';
+                    ?>
+                    <select name="" id="">
+                        <option value="">---Избор на град---</option>
+                        <option value="">невъведен</option>
+                        <option value="">Бургас</option>
+                        <option value="">Варна</option>
+                        <option value="">София</option>
+                    </select>
+                    <?php
                 }
 //                } else {
 //                    echo '<h2>Профили</h2>';
 //                }
-                echo '<table id="profiles">';
+        //                echo '<table id="profiles">';
                 ?>
-                <thead>
-                <tr>
-                    <th>Име</th>
-                    <th>Фамилия</th>
-                    <th>Потребителско име</th>
-                    <th>Град</th>
-                </tr>
-                </thead>
+        <!--                <thead>-->
+        <!--                <tr>-->
+        <!--                    <th>Име</th>-->
+        <!--                    <th>Фамилия</th>-->
+        <!--                    <th>Потребителско име</th>-->
+        <!--                    <th>Град</th>-->
+        <!--                </tr>-->
+        <!--                </thead>-->
                 <?php
                 while ($usersf = mysqli_fetch_assoc($users)) {
                     ?>
 
-                    <tr>
-                        <td width="31%"><?= $usersf['firstname']; ?></td>
-                        <td width="31%"><?= $usersf['lastname']; ?></td>
-                        <td width="31%"><?= $usersf['username']; ?></td>
+        <div>
+            <h2><?= $usersf['firstname']; ?> <?= $usersf['lastname']; ?></h2>
+            <!--                        <td width="31%">--><?//= $usersf['username']; ?><!--</td>-->
                         <!--                                        <td width="10%">-->
                         <?//=$usersf['typename'];?><!--</td>-->
-                        <td width="5%"><?= $usersf['city']; ?></td>
-                    </tr>
+            Град: <?= $usersf['city']; ?>
                     <?php
                 }
-                echo '</table>';
+                    //                echo '</table>';
             }
         }
         ?>
