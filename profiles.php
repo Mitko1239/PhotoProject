@@ -13,15 +13,22 @@ $type = $_GET['type'];
         <?php
         $sql =
             "SELECT u.*, t.name 'typename' FROM users u
-                        JOIN types t ON t.typeid=u.typeid
-                        WHERE u.typeid='$type'";
+                        JOIN types t ON t.typeid=u.typeid";
+        if (isset($type) && $type != null && is_numeric($type)) {
+            $sql .= "WHERE u.typeid='$type'";
+        }
         if ($users = mysqli_query($GLOBALS['link'], $sql)) {
             $row_cnt = mysqli_num_rows($users);
-//            printf("Result set has %d rows.\n", $row_cnt);
+            printf("Result set has %d rows.\n", $row_cnt);
             if ($row_cnt > 0) {
-                $types = mysqli_query($GLOBALS['link'], $sql);
-                $typesf = mysqli_fetch_assoc($types);
-                echo '<h2>Профили на ' . mb_strtolower($typesf['typename']) . 'и</h2>';
+                if (isset($type) && $type != null && is_numeric($type)) {
+                    $types = mysqli_query($GLOBALS['link'], $sql);
+                    $typesf = mysqli_fetch_assoc($types);
+                    echo '<h2>Профили на ' . mb_strtolower($typesf['typename']) . 'и</h2>';
+                }
+//                } else {
+//                    echo '<h2>Профили</h2>';
+//                }
                 echo '<table id="profiles">';
                 ?>
                 <thead>

@@ -67,146 +67,150 @@
         <mandatory>1</mandatory>
         <data-type>int(1)</data-type>
       </column>
-      <index id="21" parent="2" name="gender">
+      <column id="21" parent="2" name="added">
+        <data-type>datetime</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <index id="22" parent="2" name="gender">
         <columns>genderid</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="22" parent="2" name="groupid">
+      <index id="23" parent="2" name="groupid">
         <columns>groupid</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="23" parent="2" name="typeid">
+      <index id="24" parent="2" name="typeid">
         <columns>typeid</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="24" parent="2" name="PRIMARY">
+      <key id="25" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="25" parent="2" name="FK_genders_users">
+      <foreign-key id="26" parent="2" name="FK_genders_users">
         <columns>genderid</columns>
         <ref-key>~.genders.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="26" parent="2" name="FK_types_users">
+      <foreign-key id="27" parent="2" name="FK_types_users">
         <columns>typeid</columns>
         <ref-key>~.types.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="27" parent="2" name="users_groups_groupid_fk">
+      <foreign-key id="28" parent="2" name="users_groups_groupid_fk">
         <columns>groupid</columns>
         <ref-key>~.groups.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="28" parent="3" name="genderid">
+      <column id="29" parent="3" name="genderid">
         <mandatory>1</mandatory>
         <data-type>int(1)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="29" parent="3" name="name">
+      <column id="30" parent="3" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <key id="30" parent="3" name="PRIMARY">
+      <key id="31" parent="3" name="PRIMARY">
         <columns>genderid</columns>
         <primary>1</primary>
       </key>
-      <column id="31" parent="4" name="groupid">
+      <column id="32" parent="4" name="groupid">
         <mandatory>1</mandatory>
         <data-type>int(1)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="32" parent="4" name="name">
+      <column id="33" parent="4" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <key id="33" parent="4" name="PRIMARY">
+      <key id="34" parent="4" name="PRIMARY">
         <columns>groupid</columns>
         <primary>1</primary>
       </key>
-      <column id="34" parent="5" name="typeid">
+      <column id="35" parent="5" name="typeid">
         <mandatory>1</mandatory>
         <data-type>int(1)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="35" parent="5" name="abbr">
+      <column id="36" parent="5" name="abbr">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="36" parent="5" name="name">
+      <column id="37" parent="5" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <index id="37" parent="5" name="id">
+      <index id="38" parent="5" name="id">
         <columns>typeid</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="38" parent="5" name="PRIMARY">
+      <key id="39" parent="5" name="PRIMARY">
         <columns>typeid</columns>
         <primary>1</primary>
       </key>
-      <column id="39" parent="6" name="userid">
+      <column id="40" parent="6" name="userid">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="40" parent="6" name="profilepic">
+      <column id="41" parent="6" name="profilepic">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="41" parent="6" name="profilebg">
+      <column id="42" parent="6" name="profilebg">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="42" parent="6" name="showFullName">
+      <column id="43" parent="6" name="showFullName">
         <data-type>int(1)</data-type>
       </column>
-      <column id="43" parent="6" name="showUsername">
+      <column id="44" parent="6" name="showUsername">
         <data-type>int(1)</data-type>
       </column>
-      <key id="44" parent="6" name="PRIMARY">
+      <key id="45" parent="6" name="PRIMARY">
         <columns>userid</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="45" parent="6" name="userprefs_users_id_fk">
+      <foreign-key id="46" parent="6" name="userprefs_users_id_fk">
         <columns>userid</columns>
         <ref-key>~.users.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="46" parent="7" name="id">
+      <column id="47" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="47" parent="7" name="username">
+      <column id="48" parent="7" name="username">
         <mandatory>1</mandatory>
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="48" parent="7" name="email">
+      <column id="49" parent="7" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(90)</data-type>
       </column>
-      <column id="49" parent="7" name="fullname">
+      <column id="50" parent="7" name="fullname">
         <data-type>double</data-type>
       </column>
-      <column id="50" parent="7" name="birthdate">
+      <column id="51" parent="7" name="birthdate">
         <mandatory>1</mandatory>
         <data-type>date</data-type>
       </column>
-      <column id="51" parent="7" name="name">
+      <column id="52" parent="7" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="52" parent="7" name="city">
+      <column id="53" parent="7" name="city">
         <mandatory>1</mandatory>
         <data-type>int(1)</data-type>
       </column>
-      <column id="53" parent="7" name="type">
+      <column id="54" parent="7" name="type">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="54" parent="7" name="group">
+      <column id="55" parent="7" name="group">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
