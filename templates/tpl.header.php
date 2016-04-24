@@ -48,6 +48,7 @@ function tplHeader($title)
         <script src="js/wheelnav.js"></script>
         <script src="js/raphael.min.js"></script>
         <script src="js/raphael.icons.min.js"></script>
+        <script src="js/script.js"></script>
         <style>
         </style>
     </head>

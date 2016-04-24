@@ -21,4 +21,6 @@ $global_user_id = user_id_from_username($_SESSION['username']);
 $GLOBALS['id'] = $_COOKIE['id'];
 $errors = array();
 
+$limit = 10;
+
 $loggedIn = $_SESSION['username'];

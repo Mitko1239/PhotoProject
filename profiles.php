@@ -54,17 +54,18 @@ $type = $_GET['type'];
                     ?>
 
         <div>
-            <h2><?= $usersf['firstname']; ?> <?= $usersf['lastname']; ?></h2>
+            <!--            <h2>--><?//= $usersf['firstname']; ?><!-- --><?//= $usersf['lastname']; ?><!--</h2>-->
             <!--                        <td width="31%">--><?//= $usersf['username']; ?><!--</td>-->
                         <!--                                        <td width="10%">-->
                         <?//=$usersf['typename'];?><!--</td>-->
-            Град: <?= $usersf['city']; ?>
+            <!--            Град: --><?//= $usersf['city']; ?>
                     <?php
                 }
                     //                echo '</table>';
             }
         }
         ?>
+
 
     </main>
 <?php tplFooter(); ?>
